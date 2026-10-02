@@ -34,13 +34,12 @@ let db, auth;
 async function main() {
   // Add Firebase project configuration object here
   const firebaseConfig = {
-    apiKey: 'AIzaSyC3NNG1g-u1t_zvhkgKpsKV_MKNiadLOpo',
-    authDomain: 'fir-web-codelab-42752.firebaseapp.com',
-    projectId: 'fir-web-codelab-42752',
-    storageBucket: 'fir-web-codelab-42752.firebasestorage.app',
-    messagingSenderId: '380810241920',
-    appId: '1:380810241920:web:f1757e7f44518af5010365',
-    measurementId: 'G-E29CKMXQMP',
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
   };
 
   // Make sure Firebase is initilized
